@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../interfaces/recipe.interface';
+import { MenuItem } from '../interfaces/menu-item.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { Recipe } from '../interfaces/recipe.interface';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: MenuItem[] = [];
 
   ngOnInit(): void {
     this.recipes = [
@@ -30,6 +30,26 @@ export class AppComponent implements OnInit {
         name: 'Optopus',
         category: 'Lunch',
         price: 30,
+      },
+      {
+        name: 'Chiken BBQ',
+        category: 'Dinner',
+        price: 29,
+      },
+      {
+        name: 'Eggs with Pork',
+        category: 'Lunch',
+        price: 32,
+      },
+      {
+        name: 'Pork',
+        category: 'Dinner',
+        price: 28,
+      },
+      {
+        name: 'Lobster',
+        category: 'Dinner',
+        price: 50,
       },
     ];
   }
